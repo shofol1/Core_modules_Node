@@ -27,7 +27,7 @@ const server = http.createServer((req, res) => {
             res.write("faild to write");
             res.end();
           } else {
-            res.write("successfull");
+            res.write("successfull write second txt");
             res.end();
           }
         });
@@ -47,10 +47,10 @@ const server = http.createServer((req, res) => {
     fs.unlink("second.txt", (err) => {
       if (err) {
         res.write("failed to delete");
-        res.end;
+        res.end();
       } else {
-        res.write("successfully deleted");
-        res.end;
+        res.write("successfully deleted second txt");
+        res.end();
       }
     });
   }
